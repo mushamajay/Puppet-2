@@ -1,1 +1,39 @@
+user { 'ajay':
+	ensure=>"present",
+	uid=>"101",
+	home=>"/home/ajay"
+     }
 
+cat /etc/passwd
+-------------------------------------
+
+group { 'ajsi':
+	ensure=>"present",
+	gid=>"01",
+      }
+
+------------------------------------
+  
+group { 'ajsi':
+	ensure=>"present",
+	gid=>"1001",
+      }
+
+user { 'ajay':
+	ensure=>"present",
+	uid=>"501",
+	home=>"/home/ajay"
+     } 
+	
+
+cut -d: -f1 /etc/group
+-------------------------------------
+
+user { 'ajay':
+	ensure=>"absent" 
+     }
+
+group { 'ajsi':
+	ensure=>"absent",
+	gid=>"1001",
+      }
