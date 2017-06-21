@@ -1,1 +1,7 @@
-
+file{ '/etc/puppet/manifests/file1.txt':
+	ensure=>"present",
+	owner=>"root",
+	group=>"root",
+	mode=>"775",
+	content=>"Congo.. A file created",
+     }
